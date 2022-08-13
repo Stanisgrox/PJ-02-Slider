@@ -31,6 +31,7 @@ const img = document.querySelector('#slider-image')
 const prev = document.querySelector('#prev')
 const next = document.querySelector('#next')
 const dots = document.querySelectorAll('.dot-selector');
+const links = document.querySelectorAll('.menu-link');
 
 const setEntity = (index) => {
     //Смена текста в полях и картинки
@@ -48,6 +49,16 @@ const setEntity = (index) => {
     //Замена активной точки на белую
     dotActive = document.querySelector('#dot' + index);
     dotActive.setAttribute("src", "img/dot_active.svg");
+
+    //Деактивация ссылок вверху
+    links.forEach(element => {
+        element.classList.remove("gold");
+        element.classList.remove("underline");
+    });
+    //Активация нужной ссылки
+    linkActive = document.querySelector('#lnk' + index);
+    linkActive.classList.add("gold");
+    linkActive.classList.add("underline");
 }
 
 let currentId = 0
