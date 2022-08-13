@@ -100,9 +100,9 @@ dots.forEach(item => {
 //Клик по ссылкам
 links.forEach(item => {
     item.addEventListener('click', event => {
-        //Получение ID. Можно добавить больше слайдов и скрипт будет работать, если формат lnk#, где # - индекс точки
+        //Получение ID. Можно добавить больше слайдов и скрипт будет работать, если формат lnk#, где # - индекс ссылки
         let lnkId = item.getAttribute('id');
-        //Удаление первых трех символов из ID 'dot'
+        //Удаление первых трех символов из ID 'lnk'
         lnkId = lnkId.substring(3);
         //Смена слайда
         setEntity(lnkId);
